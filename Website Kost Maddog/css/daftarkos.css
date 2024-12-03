@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --primary-blue: #0078A8;
+            --secondary-blue: #00C6D7;
+            --accent-blue: #5FD1D7;
+            --background-light: #F4F8FA;
+            --text-dark: #2C3333;
+            --white: #FFFFFF;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-light);
+        }
+
+        .navbar-custom {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            box-shadow: 0 8px 25px var(--shadow-color);
+            padding: 0.75rem 0;
+        }
+
+        .navbar-brand {
+            color: var(--white) !important;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+        }
+
+        .nav-link {
+            color: var(--white) !important;
+            position: relative;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--white);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+
+        .form-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 12px 25px var(--shadow-color);
+            padding: 40px;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-header h1 {
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+
+        .form-header p {
+            color: var(--text-gray);
+        }
+
+        .form-group label {
+            font-weight: 600;
+        }
+
+        .form-control {
+            border-radius: 10px;
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, var(--secondary-blue), var(--accent-blue));
+            border: none;
+            color: var(--white);
+            font-weight: 600;
+            border-radius: 30px;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            width: 100%;
+        }
+
+        .btn-submit:hover {
+            opacity: 0.9;
+        }
